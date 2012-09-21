@@ -1,0 +1,205 @@
+<?php
+if(!defined('SEBUG_ROOT')) {exit('Access Denied');}
+//英文
+$language = array
+(
+	//a title
+	'sebug_title_home' => 'SEBUG Security Database',
+	'sebug_title_Vulndb' => 'Vulndb',
+	'sebug_title_Exploits' => 'Exploits',
+	'sebug_title_Submit' => 'Report',
+	'sebug_title_Forum' => 'Forum',
+	'sebug_title_Partner' => 'Partners',
+	'sebug_title_about' => 'AboutUS',
+	'sebug_title_js' => 'SEBUG Security Database JS call statement',
+	'sebug_title_appdir' => 'App contents',
+	'sebug_meta_keywords' => '漏洞,Exploits,溢出,Overflow,bug,Vulnerabilities,利用代码,papers,appdir',
+	'sebug_meta_description' => 'SEBUG安全漏洞数据库 - 致力于信息安全漏洞的研究及收集整理',
+	'sebug_meta_keywords_bugslist' => 'Exploits,溢出,利用代码,Vulnerabilities,漏洞,bug,Overflow,0day,SEBUG安全漏洞数据库',
+	'sebug_meta_description_bugslist' => 'Exploits,溢出,利用代码,漏洞,Vulnerabilities,bug,SEBUG Security Database',
+	'sebug_meta_keywords_explist' => 'Exploits,Overflow,溢出,利用代码,SEBUG安全漏洞数据库',
+	'sebug_meta_description_explist' => '溢出,利用代码,Exploits,Overflow,SEBUG Security Database',
+
+	//js
+	'sebug_title_js_info' => 'SEBUG Security Database JavaScript transfer',
+	'sebug_title_js_1' => '<li>1、list view mode</li>',
+	'sebug_title_js_2' => '<li>2、scroll view mode</li>',
+	'sebug_title_js_v_info' => 'V display mode (V = 1, for a list of shows, V = 2, for the show rolling. V default value of 1)',
+	'sebug_title_js_t_info' => 'T showed that the amount of information(T default value for 8)',
+	'sebug_title_js_l_info' => 'L shows that the title characters in length (L default value of 80)',
+	
+	//主页搜索信息
+	'sebug_home_searchinfo' => 'Enter to search for information',
+	'sebug_home_ipc' => '',
+
+	//article
+	'sebug_article_Published' => 'Published',
+	'sebug_article_Submit' => 'author',
+	'sebug_article_Vulnerable' => 'Vulnerable',
+	'sebug_article_Discription' => 'Discription',
+	'sebug_article_References' => 'References',
+	'sebug_article_solution' => 'SEBUG Solution',
+	'sebug_article_Exploit' => 'Exploit',
+	'sebug_article_exp_info' => 'The following procedures (methods) may contain something offensive，they are only for security researches and teaching , at your own risk!',
+
+	//list
+	'sebug_list_os' => 'All System',
+	'sebug_list_type' => 'All Type',
+	'sebug_list_type_1' => 'Unauthorized access',
+	'sebug_list_type_2' => 'Denial of service',
+	'sebug_list_type_3' => 'injecting malware codes',
+	'sebug_list_type_4' => 'SQL injection',
+	'sebug_list_type_5' => 'other',
+	'sebug_list_type_6' => 'Remote Overflow',
+	'sebug_list_type_7' => 'File include',
+	'sebug_list_type_8' => 'local overflow',
+	'sebug_list_type_9' => 'XSS',
+	'sebug_list_type_10' => 'Web Apps',
+	'sebug_list_type_11' => 'Traverse directory',
+	'sebug_list_type_12' => 'DOS/POC',
+	'sebug_list_type_13' => 'ShellCode',
+	'sebug_list_type_14' => 'upload',
+	'sebug_list_type_15' => 'Leaking information',
+	'sebug_list_type_16' => 'Remote implementation',
+	'sebug_list_type_17' => 'Insecure Cookie Handling',
+
+	'sebug_list_os_1' => 'Cross-platform',
+
+	//Partners
+	'sebug_Partners_1' => 'Partners',
+	'sebug_Partners_2' => 'Contact Us',
+	'sebug_Partners_mail' => 'E-mail',
+	'sebug_Partners_site' => 'HomePage',
+	'sebug_Partners_Sponsors' => 'Sponsors',
+	'sebug_Partners_Cooperation' => 'Cooperation',
+	'sebug_Partners_info' => '<u>SEBUG Security vulnerability Database</u> accept any security vendor or agency to carry out the contents of various forms of cooperation.',
+
+	//about
+	'sebug_about_1' => '1. Acknowledgement',
+	'sebug_about_1_info' => 'First we’d like to show gratitude to the people and groups concerned in the setting up of this website.<br />This site focuses on the study and further research in the security of the network. It is for the purpose of convenient collection and management of data on the faults and defects of network home and abroad, that we develop SEBUG Security vulnerability Database. Please contact us directly if you have any question or suggestion. Thanks again for your support.',
+
+	'sebug_about_2' => '2. Structure',
+	'sebug_about_2_a' => 'a. search',
+	'sebug_about_2_a_info' => 'Please type the name of your target program or SSV ID into the textbox and search for the faults and defects of this program. The system doesn’t support logic function including multi-keyword at present.',
+
+	'sebug_about_2_b' => 'b. information report',
+	'sebug_about_2_b_info_1' => 'A module for information report is offered in this system. ',
+	'sebug_about_2_b_info_3' => 'click report',
+	'sebug_about_2_b_info_2' => ' Information can only be reported after registration. Choose the right information type [Exploits，Vulnerabilities]. Boxes marked with（*）must be filled in. Your report will be checked after being submitted. The information will be available in the database once it gets through the check.',
+
+	'sebug_about_2_c' => 'c. RSS output',
+	'sebug_about_2_c_info' => ' , offering RSS output.',
+
+	'sebug_about_2_d' => 'd、JavaScript transfer',
+	'sebug_about_2_d_info' => ' , offering JStransfer.',
+
+	'sebug_about_2_f' => 'e、sitemap',
+	'sebug_about_2_f_info' => ', sitemap.',
+
+	'sebug_about_3' => '3. history of development',
+
+	'sebug_about_3_info' => '<li>Aug. 01, 2006,  SEBUG got started.</li>
+	<li>Aug. 13, 2006,  sebug.net was formally registered and came into effect.</li>
+	<li>Aug. 18, 2006,  Bug Exp Search @BETA was released, mainly focusing on the collection and management of data on the faults and defects of network home and abroad.</li>
+	<li>Oct. 25, 2006,  SEBUG was released. The outlook of the website was improved. Several codes and security hazard got updated and mended.</li><li>Jul, 2007,  Bug Exp Search was changed into the name SEBUG Security vulnerability Database.</li>
+	<li>Jun, 2008,  SSVDB Forums appeared. Information security technique communication forum, focusing on the discussion over security service and relevant standards.</li>
+	<li>Jul, 2008,  Got more concern and support from all around. SEBUG recollected some codes, containing up to 10800 data.</li>
+	<li>Aug, 2008, “SEBUG Security vulnerability Database” was interviewed by “NoHack.CN”, the domestic well-known magazine. Introduced in details are the core members and history of“SEBUG Security vulnerability Database”.</li>
+	<li>Oct, 2008,  Improve the site. Redesign ranged from script to the whole database. There’s a considerable improvement either in the form or in the context, which enables the site to develop further.</li>
+	<li>Jan, 2009,  Turn off the SSD Forums.</li>
+	<li>Feb, 2009,  The opening of a new user management system,Follow the previous user database.</li>
+	<li>Apr, 2009,  Re-organize the structure of the database. </li>
+	<li>May, 2009,  adding appdir module, update the database and website architecture. </li>',
+
+	'sebug_about_4' => '4. Gratitude to those who contributed to SEBUG',
+	'sebug_about_5' => '5. Statement',
+
+	'sebug_no_1' => 'Latest：',
+	'sebug_no_2' => 'WEB App：',
+	'sebug_no_3' => 'Search More For internet：',
+	'sebug_no_title' => 'SEBUG Security Database -  Page Not Found',
+			
+	//login_page
+	'login_title_reg' => 'Create a SEBUG Accounts',
+	'login_title_Modify' => 'Modify my information - SEBUG Accounts',
+	'login_clientcode' => 'Clientcode error, please return to re-enter.',
+	'login_username_length' => 'name Highest of 30 characters in length.',
+	'login_user_name' => 'user name contains unacceptable characters or administrator shield, please choose another.',
+	'login_passwd_length' => 'Password Minimum of 8 characters in length.',
+	'login_confirmpassword' => 'Please confirm the password in line.',
+	'login_passwd_characters' => 'Password contains unacceptable characters or administrator shield, please choose another.',
+	'login_name_registered' => 'The user name has been registered, please return to re-select another.',
+	'login_mail_registered' => 'The E-mail has been registered.',
+	'login_Reg_ok' => 'Registration success.',
+	'login_m_passwd' => 'Error, please try to re-visit this again.',
+	'login_Error_passwd' => 'Invalid password.',
+	'login_modified_success_pass' => 'Info has been modified success, you modify your password, need to re-visit.',
+	'login_modified_success' => 'Info has been modified success.',
+	'login_account_disabled' => 'Your account has been disabled, Please contact administrator.',
+	'login_title_addv' => 'add Vulndb - SEBUG Accounts',
+	'login_title_adde' => 'add Exploits - SEBUG Accounts',
+	'login_add_overtime' => 'Links overtime! Please re-submit, Thank you.',
+	'add_title' => 'Please enter title.',
+	'add_system' => 'Please enter system.',
+	'add_type' => 'Please enter type.',
+	'add_Published' => 'Please enter Published.',
+	'add_time' => 'Enter your release time is not legitimate.',
+	'add_Vulnerable' => 'Please enter Vulnerable.',
+	'add_grades' => 'Please enter grades.',
+	'add_Discussion' => 'Please enter Discussion.',
+	'add_Solution' => 'Please enter Solution.',
+	'add_References' => 'Please enter References.',
+	'add_Database_already' => 'Database already exists. Thank you for your support.',
+	'add_success' => 'successfully! Please wait for administrator review.',
+	'add_Exploit' => 'Please enter Exploit.',
+	
+	'lo_create_acc' => 'Create an Account',
+	'lo_Re_password' => 'Re-enter password',
+	'lo_Sign_in_1' => 'Sign in with your',
+	'lo_Sign_in_2' => 'Don\'t have a SEBUG Account? ',
+	'lo_Sign_in_3' => 'Create an account now',
+	'lo_forgotten_password' => 'P.S. If you have forgotten your password, please contact s1_at_sebug.net.',
+	'lo_login' => 'Sign in',
+	'lo_Submit' => 'Submit',
+	'lo_Register' => 'Register',
+	
+	'add_t_Title' => 'Title:',
+	'add_t_Published' => 'Published:',
+	'add_t_Type' => 'Type:',
+	'add_t_Exploite' => 'Exploite:',
+	'add_t_clientcode' => 'clientcode(*):',
+	'add_t_System' => 'System:',
+	'add_t_Vulnerable' => 'Vulnerable:',
+	'add_t_Grades' => 'Grades:',
+	'add_t_Grades_1' => '<option value="0">---L---</option>
+					<option value="1">---M---</option>
+					<option value="2">---H---</option>',
+	'add_t_Discussion' => 'Discussion:',
+	'add_t_Solution' => 'Solution:',
+	'add_t_References' => 'References:',
+	'add_t_UserName' => 'UserName(*):',
+	'add_t_PassWord' => 'PassWord(*):',
+	
+	'h_login' => 'Sign in',
+	'h_logout' => 'Sign Out',
+	'h_Sitting' => 'Sitting',
+	
+	'appview_website' => 'website',
+	'appview_Chart' => 'Chart',
+	
+	'check_loging' => 'System upgrade, the registration and login is temporarily unavailable',
+	
+	//google adsense
+	'sebug_kmyad' => '<div class="kmyad"><script type="text/javascript"><!--
+			google_ad_client = "pub-2451943208076255";
+			/* 234x60_sebug */
+			google_ad_slot = "7442915420";
+			google_ad_width = 234;
+			google_ad_height = 60;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script></div>',
+	);
+?>

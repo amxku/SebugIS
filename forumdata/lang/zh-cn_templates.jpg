@@ -1,0 +1,196 @@
+<?php
+if(!defined('SEBUG_ROOT')) {exit('Access Denied');}
+//中文
+$language = array
+(
+	//a title
+	'sebug_title_home' => 'SEBUG安全漏洞数据库',
+	'sebug_title_Vulndb' => '漏洞信息',
+	'sebug_title_Exploits' => 'Exploits',
+	'sebug_title_Forum' => '论坛',
+	'sebug_title_Submit' => '提交信息',
+	'sebug_title_Partner' => '合作伙伴',
+	'sebug_title_about' => '关于我们',
+	'sebug_title_js' => 'SEBUG安全漏洞数据库JS调用说明',
+	'sebug_title_appdir' => '厂商目录',
+	'sebug_meta_keywords' => '漏洞,Exploits,溢出,Overflow,bug,Vulnerabilities,利用代码,papers,appdir',
+	'sebug_meta_description' => 'SEBUG安全漏洞数据库 - 致力于信息安全漏洞的研究及收集整理',
+	'sebug_meta_keywords_bugslist' => 'Exploits,溢出,利用代码,Vulnerabilities,漏洞,bug,Overflow,0day,SEBUG安全漏洞数据库',
+	'sebug_meta_description_bugslist' => 'Exploits,溢出,利用代码,漏洞,Vulnerabilities,bug,SEBUG Security Database',
+	'sebug_meta_keywords_explist' => 'Exploits,Overflow,溢出,利用代码,SEBUG安全漏洞数据库',
+	'sebug_meta_description_explist' => '溢出,利用代码,Exploits,Overflow,SEBUG Security Database',
+
+	//js
+	'sebug_title_js_info' => 'SEBUG Security Database JS调用说明',
+	'sebug_title_js_1' => '<li>1、列表显示</li>',
+	'sebug_title_js_2' => '<li>2、滚动显示</li>',
+	'sebug_title_js_v_info' => 'V 显示模式(V=1,为列表显示，V=2,为滚动显示。V值默认为1)',
+	'sebug_title_js_t_info' => 'T 显示信息数量(T值默认为8)',
+	'sebug_title_js_l_info' => 'L 显示标题字符长度(L值默认为80)',
+
+	//主页搜索信息
+	'sebug_home_searchinfo' => '请输入要搜索的相关信息',
+	//'sebug_home_ipc' => '鄂ICP备05024839号',
+	'sebug_home_ipc' => '',
+	
+
+	//article
+	'sebug_article_Published' => '发布时间',
+	'sebug_article_Submit' => '信息提交',
+	'sebug_article_Vulnerable' => '影响版本',
+	'sebug_article_Discription' => '漏洞描述',
+	'sebug_article_References' => '参考',
+	'sebug_article_solution' => 'SEBUG安全建议',
+	'sebug_article_Exploit' => '测试方法',
+	'sebug_article_exp_info' => '本站提供程序(方法)可能带有攻击性,仅供安全研究与教学之用,风险自负!',
+
+	//list
+	'sebug_list_os' => '所有系统',
+	'sebug_list_type' => '所有类型',
+	'sebug_list_type_1' => '越权访问',
+	'sebug_list_type_2' => '拒绝服务',
+	'sebug_list_type_3' => '嵌入恶意代码',
+	'sebug_list_type_4' => 'SQL注入',
+	'sebug_list_type_5' => '其他类型',
+	'sebug_list_type_6' => '远程溢出',
+	'sebug_list_type_7' => '文件包含',
+	'sebug_list_type_8' => '本地溢出',
+	'sebug_list_type_9' => '跨站',
+	'sebug_list_type_10' => 'Web Apps',
+	'sebug_list_type_11' => '遍历目录',
+	'sebug_list_type_12' => 'DOS/POC',
+	'sebug_list_type_13' => 'ShellCode',
+	'sebug_list_type_14' => '上传',
+	'sebug_list_type_15' => '信息泄漏',
+	'sebug_list_type_16' => '远程执行',
+	'sebug_list_type_17' => 'Cookie验证漏洞',
+	
+	'sebug_list_os_1' => '跨平台',
+
+	//Partners
+	'sebug_Partners_1' => '合作伙伴',
+	'sebug_Partners_2' => '联系方式',
+	'sebug_Partners_mail' => '邮箱',
+	'sebug_Partners_site' => '网站',
+	'sebug_Partners_Sponsors' => '赞助厂商',
+	'sebug_Partners_Cooperation' => '合作',
+	'sebug_Partners_info' => '<u>SEBUG Security vulnerability Database</u> 接受任何安全厂商或机构以各种形式进行内容合作。',
+
+	//about
+	'sebug_about_1' => '1、说点什么',
+	'sebug_about_1_info' => '本站点的建立离不开一些朋友和组织的帮助,在此对他们表示感谢!<br />
+			我们着眼于网络安全的学习和探讨,之所以开发SEBUG Security vulnerability Database是为了更方便的管理与收集国内外网络安全缺陷以及漏洞资料。如果您有任何问题和意见，请直接与我们联系s1 [at] sebug.net ,再次感谢您的支持!',
+
+	'sebug_about_2' => '2、结构',
+	'sebug_about_2_a' => 'a、搜索',
+	'sebug_about_2_a_info' => '请在文本框内输入您要搜索的程序名称或是SSV ID,搜索该程序出现的各种漏洞，本系统暂不支持多关键词等逻辑功能。',
+
+	'sebug_about_2_b' => 'b、信息上报',
+	'sebug_about_2_b_info_1' => '本系统提供了上报模块',
+	'sebug_about_2_b_info_3' => '点击上报',
+	'sebug_about_2_b_info_2' => '，需注册用户后才能提交上报信息，应选择信息类别[Exploits，Vulnerabilities]。其中（*）部分必须填写。在提交后，系统审计人员会对信息进行审核，在通过审核后，该信息才会显示在数据库中。',
+
+	'sebug_about_2_c' => 'c、RSS输出',
+	'sebug_about_2_c_info' => ' , 提供RSS输出。',
+
+	'sebug_about_2_d' => 'd、Javascript调用',
+	'sebug_about_2_d_info' => ' , 提供JS调用。',
+
+	'sebug_about_2_f' => 'e、网站地图',
+	'sebug_about_2_f_info' => ', 网站地图。',
+
+	'sebug_about_3' => '3、发展历程',
+
+	'sebug_about_3_info' => '<li>2006年08月01日，SEBUG开始筹备阶段。</li>
+	<li>2006年08月13日，sebug.net 域名正式注册生效。</li>
+	<li>2006年08月18日，Bug Exp Search @BETA版发布。内容以管理与收集国内外网络安全缺陷以及漏洞资料为主。</li><li>2006年10月25日，SEBUG正式版发布。网站再次进行外观上的大改版，优化整理了部分代码，修补了若干安全隐患。</li>
+	<li>2007年7月，Bug Exp Search 正式更名为 安全漏洞信息库[SEBUG Security vulnerability Database]，简称 SSVDB。</li>
+	<li>2008年6月，SSVDB Forums 上线，信息安全技术交流平台，以讨论安全服务及其相关标准为主。</li><li>2008年7月，开始有更多的朋友关注和支持，SEBUG安全数据库重新整理了部分代码。数据库已达到10800余条记录。</li>
+	<li>2008年8月，“SEBUG Security vulnerability Database”很荣幸被国内知名杂志“黑客手册”采访，并且刊登封面。杂志详细的报道和介绍“SEBUG Security vulnerability Database”核心成员以及“SEBUG Security vulnerability Database”的发展史。</li><li>2008年10月，站点改版，从脚本到数据库都进行了重新设计。这次改版从形式到内容，都将是一个比较大的飞跃，站点有了很强的可扩展性。</li>
+	<li>2009年01月，关闭了SSVDB Forums。</li>
+	<li>2009年02月，启用了新的用户管理系统，沿用了以前的用户数据库。</li>
+	<li>2009年04月，重新整理了数据库结构。</li>
+	<li>2009年05月，添加appdir模块，更新数据库及网站架构。</li>',
+
+	'sebug_about_4' => '4、感谢曾经对SEBUG做出贡献的人员(乱序)',
+
+	'sebug_about_5' => '5、声明',
+
+	'sebug_no_1' => '最新收入：',
+	'sebug_no_2' => '脚本相关：',
+	'sebug_no_3' => '搜索更多：',
+	'sebug_no_title' => '漏洞信息库 - 没有找到您想要的相关信息',
+	
+	//login_page
+	'login_title_reg' => '注册 - SEBUG Accounts',
+	'login_title_Modify' => '修改我的资料 - SEBUG Accounts',
+	'login_clientcode' => '验证码不正确，请重新输入。',
+	'login_username_length' => '用户名最长为30个字符。',
+	'login_user_name' => '用户名中包含管理员屏蔽的字符，请选择其他。',
+	'login_passwd_length' => '密码至少为8个字符的长度。',
+	'login_confirmpassword' => '请确认密码一致。',
+	'login_passwd_characters' => '密码中包含管理员屏蔽的字符，请选择其他',
+	'login_name_registered' => '用户名已注册，请返回重新选择。',
+	'login_mail_registered' => '该E-mail地址已注册，请返回重新选择。',
+	'login_Reg_ok' => '注册成功。',
+	'login_m_passwd' => '新密码不能和以前的密码一样。',
+	'login_Error_passwd' => '密码无效。',
+	'login_modified_success_pass' => '信息已被修改成功，您修改密码，需要重新登录。',
+	'login_modified_success' => '信息已被修改成功。',
+	'login_account_disabled' => '您的帐户已停用，请联系管理员。',
+	'login_title_addv' => 'add Vulndb - SEBUG Accounts',
+	'login_title_adde' => 'add Exploits - SEBUG Accounts',
+	'login_add_overtime' => '链接超时！请重新提交，谢谢。',
+	'add_title' => '请输入标题。',
+	'add_system' => '请选择对应系统。',
+	'add_type' => '请选择对应类型。',
+	'add_Published' => '请输入时间。',
+	'add_time' => '您输入的时间格式不正确。请重新输入。',
+	'add_Vulnerable' => '请输入影响版本。',
+	'add_grades' => '请输入危害级别。',
+	'add_Discussion' => '请输入详细说明。',
+	'add_Solution' => '请输入解决方案。',
+	'add_References' => '请输入参考信息。',
+	'add_Database_already' => '数据库中已存在。谢谢您的支持。',
+	'add_success' => '提交成功！请等待管理员审核。谢谢。',
+	'add_Exploit' => '请输入利用代码。',
+	
+	'lo_create_acc' => '创建一个帐户',
+	'lo_Re_password' => '再次输入密码',
+	'lo_Sign_in_1' => '登录您的帐户',
+	'lo_Sign_in_2' => '还没有SEBUG帐户? ',
+	'lo_Sign_in_3' => '现在注册',
+	'lo_forgotten_password' => 'P.S.如果您忘记了密码，请联系s1_at_sebug.net 。',
+	'lo_login' => '登  录',
+	'lo_Submit' => '提  交',
+	'lo_Register' => '注  册',
+	
+	'add_t_Title' => '标题:',
+	'add_t_Published' => '发布时间:',
+	'add_t_Type' => '所属类型:',
+	'add_t_Exploite' => '利用代码:',
+	'add_t_clientcode' => '验证码(*):',
+	'add_t_System' => '所属系统:',
+	'add_t_Vulnerable' => '影响版本:',
+	'add_t_Grades' => '危害级别:',
+	'add_t_Grades_1' => '<option value="0">---低---</option>
+					<option value="1">---中---</option>
+					<option value="2">---高---</option>',
+	'add_t_Discussion' => '详细说明:',
+	'add_t_Solution' => '解决方案:',
+	'add_t_References' => '参考:',
+	'add_t_UserName' => '用户名(*):',
+	'add_t_PassWord' => '密  码(*):',
+	
+	'h_login' => '登录',
+	'h_logout' => '退出',
+	'h_Sitting' => '设置',
+	
+	'appview_website' => '官方网站',
+	'appview_Chart' => '漏洞走势图',
+	
+	'check_loging' => '系统升级中,暂时无法注册和登陆',
+	
+	'sebug_kmyad' => '',
+	);
+?>

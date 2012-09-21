@@ -1,0 +1,39 @@
+/*
+sebug.net v1.0
+website: http://sebug.net
+*/
+body {margin: 0;padding: 0;font-size: 12px;font-family: Arial, sans-serif;color: #333;line-height:13px;}
+td {font-size: 12px;font-family: Arial, sans-serif;line-height: 18px;}
+a {color: #333399;text-decoration: none;}
+a:hover {color: #C00;text-decoration: underline;}
+a:visited {color: #C00;text-decoration: underline;}
+#mainbody {padding:5px 80px;margin:0 auto;}
+ul.info li{font-size:12px;margin:0;color:#444;line-height:30px;height:30px;}
+.copyright {clear: both;border-top: 1px solid #bbb;background: #f4f4f4;margin: 1px 0;padding:3px 0 4px 30px;font-size:11px;color: #666666;line-height: 20px;}
+h4 {font-size: 13px;font-weight: bold;}
+button {font-weight:700;text-decoration:none;margin:2px 5px;background:#303B4A;color:#fff;padding:3px 20px;}
+#header {padding:5px 10px;background:#303B4A;height:24px;line-height:24px;font-size:12px;color:#eee;border-bottom:8px solid #008000;}
+#header h3 {padding:0;margin:0;}
+#header a {color:#ddd;text-decoration: underline;}
+#header a:hover{color:#fff;text-decoration: none;}
+.tableheader {border-top:1px solid #ddd;}
+.tdbheader td{padding: 10px 6px 8px 6px;font-weight: bold;font-size:14px;color:#5B686F;border-bottom:1px solid #ddd;}
+.tdbheader td a{color: #fff;}
+.navlink {font-size: 14px;font-weight: bold;margin: 0;padding: 5px 0 10px 0;border-bottom: #7B81A9 1px solid;}
+.tablecell td{color: #333;border-top: 1px solid #fff;border-bottom: 1px solid #ddd;background: #f1f1f1;padding: 4px;}
+.tablecell2 td{color: #333;border-top: 1px solid #fff;border-bottom: 1px solid #ddd;background: #F9F9F9;padding: 4px;}
+.no {color:#f00;}
+.yes {color:#009933;}
+.clear {clear:both;}
+.head td{border-top:1px solid #bbb;border-bottom:1px solid #ddd;background:#e9e9e9;padding:3px;font-weight:bold;}
+.tdfoot td{border-bottom:1px solid #ddd;background:#e9e9e9;padding:8px 10px;font-weight:bold;}
+.input-line td{padding:5px;}
+.input-line .input-title{font-weight:bold;padding:3px 40px 3px 10px;}
+.input-submit td{padding:0;}
+.records {float:left;font-weight: bold;line-height:22px;}
+.multipage {float:right;font-weight:bold;}
+.operation a {font-weight:bold;}
+.operation span {font-size:12px;}
+.ajaxmsg {background:#C00;color:#fff;line-height:20px;padding:20px;}
+.ajaxdiv {border:3px solid #C00;background:#F9F9F9;position:absolute;padding:10px;}
+.ajaxdiv button {text-decoration:none;background:#303B4A;color:#fff;}

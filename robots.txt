@@ -1,0 +1,6 @@
+﻿#
+# robots.txt for sebug.net
+#
+User-Agent: *
+Allow: /
+Sitemap:http://sebug.net/sitemap.xml

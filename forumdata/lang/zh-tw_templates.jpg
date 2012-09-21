@@ -1,0 +1,208 @@
+<?php
+if(!defined('SEBUG_ROOT')) {exit('Access Denied');}
+//繁体
+$language = array
+(
+	//a title
+	'sebug_title_home' => 'SEBUG安全漏洞數據庫',
+	'sebug_title_Vulndb' => '漏洞信息',
+	'sebug_title_Exploits' => 'Exploits',
+	'sebug_title_Submit' => '信息上報',
+	'sebug_title_Forum' => '論壇',
+	'sebug_title_Partners' => '合作夥伴',
+	'sebug_title_about' => '關於我們',
+	'sebug_title_js' => 'EBUG安全漏洞數據庫JS 調用說明',
+	'sebug_title_appdir' => '系統目錄',
+	'sebug_meta_keywords' => '漏洞,Exploits,溢出,Overflow,bug,Vulnerabilities,利用代碼,papers,appdir',
+	'sebug_meta_description' => 'SEBUG安全漏洞數據庫 - 致力于信息安全漏洞的研究及收集整理',
+	'sebug_meta_keywords_bugslist' => 'Exploits,溢出,利用代碼,Vulnerabilities,漏洞,bug,Overflow,0day,SEBUG安全漏洞數據庫',
+	'sebug_meta_description_bugslist' => 'Exploits,溢出,利用代碼,漏洞,Vulnerabilities,bug,SEBUG Security Database',
+	'sebug_meta_keywords_explist' => 'Exploits,溢出,利用代碼,SEBUG安全漏洞數據庫',
+	'sebug_meta_description_explist' => 'Exploits,溢出,利用代碼,SEBUG Security Database',
+
+	//js
+	'sebug_title_js_info' => 'SEBUG Security Database JS 調用說明',
+	'sebug_title_js_1' => '<li>1、列表顯示</li>',
+	'sebug_title_js_2' => '<li>2、滾動顯示</li>',
+	'sebug_title_js_v_info' => 'V 顯示模式(為列表顯示，V=2,為滾動顯示。V值默認為1)',
+	'sebug_title_js_t_info' => 'T 顯示信息數量(T值默認為8)',
+	'sebug_title_js_l_info' => 'L 顯示標題字符長度(L值默認為80)',
+
+	//主页搜索信息
+	'sebug_home_searchinfo' => '請輸入要搜索的相關信息',
+	'sebug_home_ipc' => '',
+	
+
+	//article
+	'sebug_article_Published' => '發佈時間',
+	'sebug_article_Submit' => '信息提交',
+	'sebug_article_Vulnerable' => '影響版本',
+	'sebug_article_Discription' => '漏洞描述',
+	'sebug_article_References' => '參考',
+	'sebug_article_solution' => 'SEBUG安全建議',
+	'sebug_article_Exploit' => '測試方法',
+	'sebug_article_exp_info' => '本站提供程序(方法)可能帶有攻擊性,僅供安全研究與教學之用,風險自負!',
+
+	//list
+	'sebug_list_os' => '所有系統',
+	'sebug_list_type' => '所有類型',
+	'sebug_list_type_1' => '越權訪問',
+	'sebug_list_type_2' => '拒絕服務',
+	'sebug_list_type_3' => '嵌入惡意代碼',
+	'sebug_list_type_4' => 'SQL注入',
+	'sebug_list_type_5' => '其他類型',
+	'sebug_list_type_6' => '遠程溢出',
+	'sebug_list_type_7' => '文件包含',
+	'sebug_list_type_8' => '本地溢出',
+	'sebug_list_type_9' => '跨站',
+	'sebug_list_type_10' => 'Web Apps',
+	'sebug_list_type_11' => '遍歷目錄',
+	'sebug_list_type_12' => 'DOS/POC',
+	'sebug_list_type_13' => 'ShellCode',
+	'sebug_list_type_14' => '上傳',
+	'sebug_list_type_15' => '信息洩漏',
+	'sebug_list_type_16' => '遠程執行',
+	'sebug_list_type_17' => 'Cookie驗證漏洞',
+
+	'sebug_list_os_1' => '跨平台',
+	
+	//Partners
+	'sebug_Partners_1' => '合作夥伴',
+	'sebug_Partners_2' => '聯繫合作',
+	'sebug_Partners_mail' => '郵箱',
+	'sebug_Partners_site' => '網站',
+	'sebug_Partners_Sponsors' => '贊助商',
+	'sebug_Partners_Cooperation' => '合作',
+	'sebug_Partners_info' => '<u>SEBUG Security vulnerability Database</u> 接受任何安全廠商或機構以各種形式進行內容合作',
+		
+	//about
+	'sebug_about_1' => '1、說點什麼',
+	'sebug_about_1_info' => '本站點的建立離不開一些朋友和組織的幫助,在此對他們表示感謝!<br /> 
+我們著眼於網絡安全的學習和探討,之所以開發SEBUG Security vulnerability Database是為了更方便的管理與收集國內外網絡安全缺陷以及漏洞資料。如果您有任何問題和意見，請直接與我們聯繫s1 [at] sebug.net ,再次感謝您的支持!',
+
+	'sebug_about_2' => '2、結構',
+	'sebug_about_2_a' => 'a、搜索',
+	'sebug_about_2_a_info' => '請在文本框內輸入您要搜索的程序名稱、SSV ID,搜索該程序出現的各種漏洞，本系統暫不支持多關鍵詞等邏輯功能。',
+
+	'sebug_about_2_b' => 'b、信息上報',
+	'sebug_about_2_b_info_1' => '本系統提供了上報模塊',
+	'sebug_about_2_b_info_3' => '信息上報',
+	'sebug_about_2_b_info_2' => '，需註冊用戶後才能提交上報信息，應選擇信息類別[Exploits，Vulnerabilities] 。其中（*）部分必須填寫。在提交後，系統審計人員會對信息進行審核，在通過審核後，該信息才會顯示在數據庫中。',
+
+	'sebug_about_2_c' => 'c、RSS 輸出',
+	'sebug_about_2_c_info' => ' , 提供RSS 輸出。',
+
+	'sebug_about_2_d' => 'd、Javascript 調用',
+	'sebug_about_2_d_info' => ' , 提供JS調用。',
+
+	'sebug_about_2_f' => 'e、網站地圖',
+	'sebug_about_2_f_info' => ', 網站地圖。',
+
+	'sebug_about_3' => '3、發展歷程',
+
+	'sebug_about_3_info' => '<li>2006年08月01日，SEBUG開始籌備階段。</li>
+	<li>2006年08月13日，sebug.net域名正式註冊生效。</li>
+	<li>2006年08月18日，Bug Exp Search @BETA版發布。內容以管理與收集國內外網絡安全缺陷以及漏洞資料為主。</li><li>2006年10月25日，SEBUG正式版發布。網站再次進行外觀上的大改版，優化整理了部分代碼，修補了若干安全隱患。</li>
+	<li>2007年7月，Bug Exp Search正式更名為安全漏洞信息庫[SEBUG Security vulnerability Database]，簡稱SSVDB。</li>
+	<li>2008年6月，SSVDB Forums上線，信息安全技術交流平台，以討論安全服務及其相關標準為主。</li><li>2008年7月，開始有更多的朋友關注和支持，SEBUG安全數據庫重新整理了部分代碼。數據庫已達到10800餘條記錄。</li>
+	<li>2008年8月，“SEBUG Security vulnerability Database”很榮幸被國內知名雜誌“黑客手冊”採訪，並且刊登封面。雜誌詳細的報導和介紹“SEBUG Security vulnerability Database”核心成員以及“SEBUG Security vulnerability Database”的發展史。</li><li>2008年10月，站點改版，從腳本到數據庫都進行了重新設計。這次改版從形式到內容，都將是一個比較大的飛躍，站點有了很強的可擴展性。</li>
+	<li>2009年01月，關閉了SSVDB Forums。</li>
+	<li>2009年02月，啟用了新的用戶管理系統，沿用了以前的用戶數據庫。</li>
+	<li>2009年04月，重新整理了數據庫的架構。</li>
+	<li>2009年05月，添加appdir模塊，更新數據庫及網站架構。 </li>',
+
+	'sebug_about_4' => '4、感謝曾經對SEBUG做出貢獻的人員(亂序)',
+
+	'sebug_about_5' => '5、聲明',
+
+	//no
+	'sebug_no_1' => '最新漏洞：',
+	'sebug_no_2' => '腳本相關：',
+	'sebug_no_3' => '搜索更多：',
+	'sebug_no_title' => '漏洞信息庫 - 沒有找到您想要的相關信息',
+	
+	
+	//login_page
+	'login_title_reg' => '註冊 - SEBUG Accounts',
+	'login_title_Modify' => '修改我的資料- SEBUG Accounts',
+	'login_clientcode' => '驗證碼不正確，請重新輸入。',
+	'login_username_length' => '用戶名最長為30個字符。',
+	'login_user_name' => '用戶名中包含管理員屏蔽的字符，請選擇其他。',
+	'login_passwd_length' => '密碼至少為8個字符的長度。',
+	'login_confirmpassword' => '請確認密碼一致。',
+	'login_passwd_characters' => '密碼中包含管理員屏蔽的字符，請選擇其他',
+	'login_name_registered' => '用戶名已註冊，請返回重新選擇。',
+	'login_mail_registered' => '該E-mail地址已註冊，請返回重新選擇。',
+	'login_Reg_ok' => '註冊成功。',
+	'login_m_passwd' => '新密碼不能和以前的密碼一樣。',
+	'login_Error_passwd' => '密碼無效。',
+	'login_modified_success_pass' => '信息已被修改成功，您修改密碼，需要重新登錄。',
+	'login_modified_success' => '信息已被修改成功。',
+	'login_account_disabled' => '您的帳戶已停用，請聯繫管理員。',
+	'login_title_addv' => 'add Vulndb - SEBUG Accounts',
+	'login_title_adde' => 'add Exploits - SEBUG Accounts',
+	'login_add_overtime' => '鏈接超時！請重新提交，謝謝。',
+	'add_title' => '請輸入標題。',
+	'add_system' => '請選擇對應系統。',
+	'add_type' => '請選擇對應類型。',
+	'add_Published' => '請輸入時間。',
+	'add_time' => '您輸入的時間格式不正確。請重新輸入。',
+	'add_Vulnerable' => '請輸入影響版本。',
+	'add_grades' => '請輸入危害級別。',
+	'add_Discussion' => '請輸入詳細說明。',
+	'add_Solution' => '請輸入解決方案。',
+	'add_References' => '請輸入參考信息。',
+	'add_Database_already' => '數據庫中已存在。謝謝您的支持。',
+	'add_success' => '提交成功！請等待管理員審核。謝謝。',
+	'add_Exploit' => '請輸入利用代碼。',
+	
+	'lo_create_acc' => '創建一個帳戶',
+	'lo_Re_password' => '再次輸入密碼',
+	'lo_Sign_in_1' => '登錄您的帳戶',
+	'lo_Sign_in_2' => '還沒有SEBUG帳戶? ',
+	'lo_Sign_in_3' => '現在註冊',
+	'lo_forgotten_password' => 'PS如果您忘記了密碼，請聯繫s1_at_sebug.net 。 ',
+	'lo_login' => '登錄',
+	'lo_Submit' => '提交',
+	'lo_Register' => '注冊',
+	
+	'add_t_Title' => '標題:',
+	'add_t_Published' => '發佈時間:',
+	'add_t_Type' => '所屬類型:',
+	'add_t_Exploite' => '利用代碼:',
+	'add_t_clientcode' => '驗證碼(*):',
+	'add_t_System' => '所屬系統:',
+	'add_t_Vulnerable' => '影響版本:',
+	'add_t_Grades' => '危害級別:',
+	'add_t_Grades_1' => '<option value="0">---低---</option>
+	<option value="1">---中---</option>
+	<option value="2">---高---</option>',
+	'add_t_Discussion' => '詳細說明:',
+	'add_t_Solution' => '解決方案:',
+	'add_t_References' => '參考:',
+	'add_t_UserName' => '用戶名(*):',
+	'add_t_PassWord' => '密  碼(*):',
+	
+	'h_login' => '登錄',
+	'h_logout' => '退出',
+	'h_Sitting' => '設置',
+	
+	'appview_website' => '官方網站',
+	'appview_Chart' => '漏洞走勢圖',
+	
+	'check_loging' => '系統升級中,暫時無法註冊和登陸',
+	
+	//google adsense
+	'sebug_kmyad' => '<div class="kmyad"><script type="text/javascript"><!--
+			google_ad_client = "pub-2451943208076255";
+			/* 234x60_sebug */
+			google_ad_slot = "7442915420";
+			google_ad_width = 234;
+			google_ad_height = 60;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script></div>',
+	);
+?>
